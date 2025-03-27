@@ -1,0 +1,90 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+h1 {
+    color: white;
+}
+
+header {
+    background-color: rgb(10, 34, 44);
+
+    height: 90px;
+    display: flex;
+
+}
+
+#logo {
+    width: 200px;
+}
+
+body {
+    background-color: rgb(7, 24, 32);
+}
+
+h2 {
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-style: normal;
+}
+
+#your {
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 100px;
+}
+
+.fotos {
+    width: 250px;
+    height: 250px;
+    margin-left: 15px;
+    border-radius: 15px;
+   
+}
+@media(max-width: 700px) {
+    #erste-reihe {
+  display: flex;
+  flex-direction: column;
+    gap: 16px;}
+}
+
+#zweite-reihe {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+@media(max-width: 700px) {
+    #zweite-reihe {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+
+
+
+footer {
+    background-color: rgb(10, 34, 44);
+    margin-top: 15%;
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#da-logo {
+    width: 160px;
+}
+
+h3 {
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
