@@ -1,4 +1,6 @@
-const bildQuellen = ["img/img1.jpg",
+
+let album = [
+    "img/img1.jpg",
     "img/img2.jpg",
     "img/img3.jpg",
     "img/img4.jpg",
@@ -9,29 +11,11 @@ const bildQuellen = ["img/img1.jpg",
     "img/img9.jpg",
     "img/img10.jpg",
     "img/img11.jpg",
-    "img/img12.jpg",
+    "img/img12.jpg"
 ];
 
-const container = document.getElementById("fotosContainer")
+let fotosContainer = document.getElementById('fotosContainer');
 
-bildQuellen.forEach((bildQuellen) => {
-    const bild = document.createElement("img");
-    bild.src = bildQuellen;
-    bild.classList.add("albumBild");
-    bild.addEventListener("click", function (event) {
-        event.stopPropagation();
-        bild.classList.toggle("groß");
-    });
-
-    container.appendChild(bild)
-
-});
-
-
-document.body.addEventListener("click", function () {
-    const alleBilder = document.querySelectorAll(".albumBild.groß"); 
-    alleBilder.forEach((bild) => bild.classList.remove("groß")); 
-});
-
-
-
+for (let i = 0; i < album.length; i++) {
+    fotosContainer.innerHTML += `<img src="${album[i]}" alt="bild ${i +1}">`;
+}

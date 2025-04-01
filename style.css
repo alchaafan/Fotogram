@@ -39,29 +39,11 @@ h2 {
     margin-bottom: 100px;
 }
 
-.albumBild {
-    width: 250px;
-    height: auto;
-    border-radius: 15px;
-    cursor: pointer;
-    margin: 10px;
-}
 
-.albumBild.groß {
-    width: 500px;
-    height: auto;
-    border-radius: 15px;
-}
-
-#bild {
+.bild {
     width: 250px;
     height: auto;
     border-radius: 15px; 
-}
-#bild.groß {
-    width: 500px;
-    height: auto; 
-    border-radius: 15px;
 }
 
 footer {
