@@ -39,16 +39,20 @@ h2 {
     margin-bottom: 100px;
 }
 
-
+#fotosContainer {
+    display: flex;
+    justify-content: space-around;
+}
 .bild {
-    width: 250px;
-    height: auto;
+    width: 150px;
+    height: 150px;
     border-radius: 15px; 
+    cursor: pointer;
 }
 
 footer {
     background-color: rgb(10, 34, 44);
-    margin-top: 9.7%;
+   margin-top: 28.8%;
     display: flex;
     padding: 1%;
     flex-direction: column;

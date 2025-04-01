@@ -16,6 +16,7 @@ let album = [
 
 let fotosContainer = document.getElementById('fotosContainer');
 
+
 for (let i = 0; i < album.length; i++) {
-    fotosContainer.innerHTML += `<img src="${album[i]}" alt="bild ${i +1}">`;
+    fotosContainer.innerHTML += `<img src="${album[i]}" alt="bild ${i +1}" class="bild">`;
 }
