@@ -39,49 +39,30 @@ h2 {
     margin-bottom: 100px;
 }
 
+.albumBild {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.albumBild.groß {
+    width: 500px;
+    height: auto;
+    border-radius: 15px;
+}
+
 #bild {
     width: 250px;
     height: auto;
     border-radius: 15px; 
 }
-.bild.groß {
+#bild.groß {
     width: 500px;
-    height: 500px; 
+    height: auto; 
     border-radius: 15px;
 }
-
-@media(max-width: 700px) {
-    #erste-reihe {
-  display: flex;
-  flex-direction: column;
-    gap: 16px;}
-}
-
-#zweite-reihe {
-   margin-left: 10%;
-   margin-right: 10%;
-    margin-top: 15px;
-}
-
-@media (max-width: 1350px){
-    #zweite-reihe {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      
-    }
-}
-
-@media(max-width: 700px) {
-    #zweite-reihe {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-}
-
-
-
 
 footer {
     background-color: rgb(10, 34, 44);
