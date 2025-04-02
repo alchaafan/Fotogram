@@ -23,11 +23,15 @@ wght@0,100;0,200;0,300;0,400;
         <div id="your">
             <h2>Dein persönliches Fotoalbum</h2>
         </div>
-        
+
         <div id="fotosContainer"></div>
-        <div id="popup"  class="overlay">
-            <img src="" alt="" id="popupImg">
-            <button onclick="closePopup()">Schließen</button>
+        <div id="popup" class="overlay">
+            <div>
+                <img src="" alt="" id="popupImg">
+                <button id="close" onclick="closePopup()">Schließen</button>
+                <button class="navi" onclick="showPrev()">&#8592; </button>
+                <button class="navi" onclick="showNext()"> &#8594; </button>
+            </div>
         </div>
     </section>
     <footer>

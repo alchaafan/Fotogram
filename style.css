@@ -46,6 +46,14 @@ h2 {
     display: flex;
     justify-content: space-around;
 }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(221, 17, 17, 0.938);
+}
 .bild {
     width: 150px;
     height: 150px;
@@ -69,7 +77,16 @@ h2 {
     max-height: 80vh;
     border-radius: 40px;
 }
-button {
+#close {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(7, 24, 32);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.navi {
     margin-top: 10px;
     padding: 10px;
     background-color: rgb(7, 24, 32);
@@ -79,14 +96,7 @@ button {
     cursor: pointer;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(19, 17, 17, 0.507);
-}
+
 footer {
     background-color: rgb(10, 34, 44);
    margin-top: 28.8%;

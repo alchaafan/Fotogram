@@ -13,7 +13,7 @@ let album = [
     "img/img11.jpg",
     "img/img12.jpg"
 ];
-
+let currentIndex = 0;
 
 function render() {
     let contentRef = document.getElementById('fotosContainer');
@@ -33,6 +33,19 @@ function closePopup() {
     const popup = document.getElementById('popup');
     popup.style.display='none';
 }
+
+function showPrev() {
+    if (currentIndex >0) {
+        currentIndex--;
+        document.getElementById('popupImg').src = album[currentIndex];
+    }
+}
     
+function showNext() {
+    if (currentIndex < album.length -1) {
+        currentIndex++;
+        document.getElementById('popupImg').src = album[currentIndex];
+    }
+}
 
 
