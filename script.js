@@ -17,6 +17,28 @@ let album = [
 let fotosContainer = document.getElementById('fotosContainer');
 
 
-for (let i = 0; i < album.length; i++) {
-    fotosContainer.innerHTML += `<img src="${album[i]}" alt="bild ${i +1}" class="bild">`;
+
+
+function render() {
+    let contentRef = document.getElementById('fotosContainer');
+    let html = '';
+    for (let i =0; i <album.length; i++) {
+        html += `<img src="${album[i]}" class="bild" alt ="Foto" onclick="showPopup('${album[i]}')">`;
+    }
+    contentRef.innerHTML=html;
 }
+function showPopup(photo) {
+    const popup = document.getElementById('popup');
+    const popupimg = document.getElementById('popupImg');
+    popupimg.src = photo;
+    popup.style.display='block';
+}
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display='none';
+}
+    
+for (let i = 0; i < album.length; i++) {
+    contentRef.innerHTML += `<img src="${album[i]}" alt="Bild ${i +1}" class="bild">`;
+}
+
