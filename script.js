@@ -14,10 +14,6 @@ let album = [
     "img/img12.jpg"
 ];
 
-let fotosContainer = document.getElementById('fotosContainer');
-
-
-
 
 function render() {
     let contentRef = document.getElementById('fotosContainer');
@@ -38,7 +34,5 @@ function closePopup() {
     popup.style.display='none';
 }
     
-for (let i = 0; i < album.length; i++) {
-    contentRef.innerHTML += `<img src="${album[i]}" alt="Bild ${i +1}" class="bild">`;
-}
+
 
