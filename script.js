@@ -33,19 +33,19 @@ function closePopup() {
     const popup = document.getElementById('popup');
     popup.style.display='none';
 }
-
-function showPrev() {
-    if (currentIndex >0) {
-        currentIndex--;
-        document.getElementById('popupImg').src = album[currentIndex];
-    }
+function togglePopup() {
+    let popupRef = document.getElementById('popup');
+    popupRef.classList.toggle('d_none');
 }
-    
+
+function showPrev () {
+    currentIndex = (currentIndex - 1 + album.length) % album.length;
+    document.getElementById('popupImg').src = album[currentIndex];
+}
+
 function showNext() {
-    if (currentIndex < album.length -1) {
-        currentIndex++;
-        document.getElementById('popupImg').src = album[currentIndex];
-    }
+    currentIndex = (currentIndex + 1) % album.length;
+    document.getElementById('popupImg').src=album[currentIndex];
 }
 
 

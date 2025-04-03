@@ -46,14 +46,7 @@ h2 {
     display: flex;
     justify-content: space-around;
 }
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: rgba(221, 17, 17, 0.938);
-}
+
 .bild {
     width: 150px;
     height: 150px;
@@ -61,21 +54,23 @@ h2 {
     cursor:pointer;
 }
 #popup {
+    position: absolute;
+    top: 0;
+    left: 450px;
     z-index: 10;
-    background-color: rgb(7, 24, 32);
-    padding: 20px;
+    background-color: rgba(83, 90, 94, 0.678);
+    padding: 90px;
     border-radius: 10px;
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+    justify-content: center;
+    position: absolute;   
 }
 #popupImg {
-    max-width: 90%;
-    max-height: 80vh;
+    height: 50vh;
     border-radius: 40px;
+}
+#buttons {
+display: flex;
+flex-direction: column;
 }
 #close {
     margin-top: 10px;
@@ -85,15 +80,19 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    position: absolute;
+    right: 1px;
 }
 .navi {
-    margin-top: 10px;
+     margin-top: 10px;
     padding: 10px;
     background-color: rgb(7, 24, 32);
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 40px;
+   
 }
 
 
