@@ -13,39 +13,32 @@ let album = [
     "img/img11.jpg",
     "img/img12.jpg"
 ];
-let currentIndex = 0;
 
-function render() {
-    let contentRef = document.getElementById('fotosContainer');
-    let html = '';
-    for (let i =0; i <album.length; i++) {
-        html += `<img src="${album[i]}" class="bild" alt ="Foto" onclick="showPopup('${album[i]}')">`;
-    }
-    contentRef.innerHTML=html;
-}
-function showPopup(photo) {
-    const popup = document.getElementById('popup');
-    const popupimg = document.getElementById('popupImg');
-    popupimg.src = photo;
-    popup.style.display='block';
-}
-function closePopup() {
-    const popup = document.getElementById('popup');
-    popup.style.display='none';
-}
-function togglePopup() {
-    let popupRef = document.getElementById('popup');
-    popupRef.classList.toggle('d_none');
+const contentRef = document.getElementById('fotosContainer');
+let imagesHTML = "";
+
+
+
+function init() {
+for (let i=0; i<album.length; i++) {
+    imagesHTML+= `<img src="${album[i]}" onclick ="bigFoto(this)">` // Die Bilder vom album in HTML Container einblenden
 }
 
-function showPrev () {
-    currentIndex = (currentIndex - 1 + album.length) % album.length;
-    document.getElementById('popupImg').src = album[currentIndex];
+contentRef.innerHTML = imagesHTML;
 }
+document.getElementById('fotosContainer').classList.add('bilder'); // Die Klasse von CSS hier eingefügt
 
-function showNext() {
-    currentIndex = (currentIndex + 1) % album.length;
-    document.getElementById('popupImg').src=album[currentIndex];
+function bigFoto(imgElement) {
+    imgElement.classList.toggle('bilder-gross'); // die einzilne Bilder werden groß beim Anklicken
 }
+ 
 
+
+
+
+
+
+
+
+   
 

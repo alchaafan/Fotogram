@@ -15,7 +15,7 @@ wght@0,100;0,200;0,300;0,400;
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="render()">
+<body onload="init()">
     <header>
         <img id="logo" src="./img/Fotogram_Logo.svg" alt="">
     </header>
@@ -24,16 +24,9 @@ wght@0,100;0,200;0,300;0,400;
             <h2>Dein persönliches Fotoalbum</h2>
         </div>
 
-        <div  id="fotosContainer"></div>
-        <div id="popup" class="d_none">
-            <div id="buttons">
-                
-                <img src="" alt="" id="popupImg">
-                <button  id="close" onclick="closePopup()" >&#x2716;</button>
-                <button class="navi" onclick="showPrev()">&#8592; </button>
-                <button class="navi" onclick="showNext()"> &#8594; </button>
-            </div>
-        </div>
+        <div id="fotosContainer"></div>
+        
+           
     </section>
     <footer>
         <img id="da-logo" src="./img/DA_logo.svg" alt="">
