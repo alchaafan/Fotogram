@@ -14,23 +14,26 @@ let album = [
     "img/img12.jpg"
 ];
 
-const contentRef = document.getElementById('fotosContainer');
+const bilder = document.getElementById('fotosContainer');
 let imagesHTML = "";
 
-
-
 function init() {
+// Die Bilder vom album in HTML Container einblenden
 for (let i=0; i<album.length; i++) {
-    imagesHTML+= `<img src="${album[i]}" onclick ="bigFoto(this)">` // Die Bilder vom album in HTML Container einblenden
+    imagesHTML+= `<img src="${album[i]}" style="cursor: pointer;" onclick="this.classList.toggle('bilder-gross')">`; 
+}
+bilder.innerHTML = imagesHTML;
 }
 
-contentRef.innerHTML = imagesHTML;
-}
-document.getElementById('fotosContainer').classList.add('bilder'); // Die Klasse von CSS hier eingefügt
+// Die Klasse von CSS hier eingefügt
+document.getElementById('fotosContainer').classList.add('bilder'); 
 
-function bigFoto(imgElement) {
-    imgElement.classList.toggle('bilder-gross'); // die einzilne Bilder werden groß beim Anklicken
+function bigFoto() {
+    
+
 }
+
+
  
 
 
