@@ -15,33 +15,26 @@ let album = [
 ];
 
 const bilder = document.getElementById('fotosContainer');
+const overlay = document.getElementById('overlay');
 let imagesHTML = "";
 
 function init() {
 // Die Bilder vom album in HTML Container einblenden
 for (let i=0; i<album.length; i++) {
-    imagesHTML+= `<img src="${album[i]}" style="cursor: pointer;" onclick="this.classList.toggle('bilder-gross')">`; 
+    imagesHTML+= `<img src="${album[i]}" style="cursor: pointer;" onclick="this.classList.toggle('bilder-gross'); toggleOverlay();">`
+  
 }
+
 bilder.innerHTML = imagesHTML;
-}
-
-// Die Klasse von CSS hier eingefügt
-document.getElementById('fotosContainer').classList.add('bilder'); 
-
-function bigFoto() {
-    
+bilder.classList.add('bilder')
 
 }
 
 
- 
+function toggleOverlay() {
+    let overlayRef = document.getElementById('overlay');
+    overlayRef.classList.toggle('d_none');
+}
 
-
-
-
-
-
-
-
-   
+window.onload = init;
 
