@@ -14,10 +14,11 @@ let album = [
     "img/img12.jpg"
 ];
 
-let currentIndex = 0;
+let currendIndex = 0;
 
 
 const bilder = document.getElementById('fotosContainer');
+const overlay = document.getElementById('overlay');
 let imagesHTML = "";
 
 function init() {
@@ -30,52 +31,17 @@ for (let i=0; i<album.length; i++) {
 bilder.innerHTML = imagesHTML;
 bilder.classList.add('bilder')
 
-
-const popupRef = document.getElementById('popupFoto');
-popupRef.innerHTML =`
-<button id="prevButton"> links</button>
-<button id="nextButton"> rechts</button>
-`;
-
-document.getElementById('prevButton').addEventListener('click', showPreviousImage);
-document.getElementById('nextButton').addEventListener('click', showNextImage);
-
 }
+let popupRef = document.getElementById('popupFoto');
+
+
+
+
 function toggleOverlay() {
     let overlayRef = document.getElementById('overlay');
     overlayRef.classList.toggle('d_none');
 }
 
-function showPreviousImage() {
-    if (currentIndex>0) {
-        currentIndex--;
-    } else {
-        currendIndex = album.length -1;
-    }
-    updatePopupImage();
-}
-
-
-function showNextImage() {
-    if (currentIndex < album.length -1) {
-        currentIndex++;
-    } else {
-        currentIndex = 0;
-    }
-    updatePopupImage();
-}
-function updatePopupImage() {
-    const popupRef = document.getElementById('popupFoto');
-    popupRef.innerHTML = `
-    <img src="${album[currentIndex]}" style="width: 100%; height: auto;">
-        <button id="prevButton">links</button>
-        <button id="nextButton">rechts</button>
-`;
-
-document.getElementById('prevButton').addEventListener('click', showPreviousImage);
-document.getElementById('nextButton').addEventListener('click', showNextImage);
-
-}
 
 window.onload = init;
 
