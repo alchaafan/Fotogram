@@ -56,7 +56,6 @@ h2 {
    
 }
 
-
 .bilder {
     width: 100px;
     height: 100px;
@@ -69,10 +68,23 @@ h2 {
     width: 600px;
     height: 500px;
     position: absolute;
-    left: 500px;
-   
-   
+    left: 500px; 
 }
+#close {
+    position: absolute;
+    top: 0px;
+    right: 700px;
+    z-index: 20;
+}
+
+#navButtons {
+    position: absolute;
+    bottom: px;
+    width: 100%;
+    text-align: center;
+    z-index: 15;
+}
+
 
 footer {
     background-color: rgb(10, 34, 44);

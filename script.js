@@ -32,16 +32,13 @@ bilder.innerHTML = imagesHTML;
 bilder.classList.add('bilder')
 
 }
-let popupRef = document.getElementById('popupFoto');
-
-
 
 
 function toggleOverlay() {
     let overlayRef = document.getElementById('overlay');
     overlayRef.classList.toggle('d_none');
+    document.getElementById('close').classList.toggle('d_none');
+    document.getElementById('rechts').classList.toggle('d_none');
+    document.getElementById('links').classList.toggle('d_none');
 }
-
-
-window.onload = init;
 

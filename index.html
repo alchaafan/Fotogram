@@ -21,16 +21,29 @@ wght@0,100;0,200;0,300;0,400;
     </header>
     <section>
         <div id="your">
-            <div id="overlay" class="overlay" onclick="toggleOverlay()"></div>
-            <div id="popupFoto"></div>
-         
+            <div id="overlay" class="overlay d_none" onclick="toggleOverlay()"></div>
+            <div>
+
+
+            </div>
+
             <h2>Dein persönliches Fotoalbum</h2>
         </div>
-       
-        <div id="fotosContainer" ></div>
-        
-        
+
+        <div id="fotosContainer"></div>
+        <div>
            
+           
+            <div id="navButtons">
+                <img id="popupFoto" src="" alt="">
+                <button class="d_none" id="close">Schließen</button>
+                <button class="d_none" id="rechts">Rechts</button>
+                <button class="d_none" id="links">Links</button>
+            </div>
+
+        </div>
+
+
     </section>
     <footer>
         <img id="da-logo" src="./img/DA_logo.svg" alt="">
@@ -40,4 +53,3 @@ wght@0,100;0,200;0,300;0,400;
 <script src="script.js"></script>
 
 </html>
-
