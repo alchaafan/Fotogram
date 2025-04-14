@@ -38,7 +38,10 @@ function toggleOverlay() {
     let overlayRef = document.getElementById('overlay');
     overlayRef.classList.toggle('d_none');
     document.getElementById('close').classList.toggle('d_none');
-    document.getElementById('rechts').classList.toggle('d_none');
-    document.getElementById('links').classList.toggle('d_none');
+   
 }
 
+function close() {
+   const closeRef = document.getElementById('popupFoto');
+ closeRef.classList.remove('bilder-gross')  
+}
