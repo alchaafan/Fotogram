@@ -17,13 +17,13 @@ let album = [
 let currentIndex = 0;
 
 function init() {
-    let fotosRef = document.getElementById('overlay');
+    let fotosRef = document.getElementById('fotosContainer');
 for (let index =0; index <album.length; index++) {
     fotosRef.innerHTML += `
       <div id="cardview">
                 <div id="fotos">
                 
-                <img  id="bilder" class="bilder-gross" src="${album[index]}" alt="">
+                <img  id="bilder" src="${album[index]}"  onclick="toggleOverlay(${index})" class="bilder-gross">
             </div>
                 
                 <button>Schließen</button>
@@ -37,7 +37,8 @@ for (let index =0; index <album.length; index++) {
 
 
 function toggleOverlay(index) {
-    let overlayRef = document.getElementById('overlay');
+    currentIndex = index;
+    let overlayRef = document.getElementById('fotosContainer');
     overlayRef.classList.toggle('overlay');
     
 }
