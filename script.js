@@ -24,7 +24,7 @@ let imagesHTML = "";
 function init() {
 // Die Bilder vom album in HTML Container einblenden
 for (let i=0; i<album.length; i++) {
-    imagesHTML+= `<img src="${album[i]}" style="cursor: pointer;" onclick="this.classList.toggle('bilder-gross'); toggleOverlay();">`
+    imagesHTML+= `<img src="${album[i]}">`
   
 }
 
@@ -38,6 +38,7 @@ function toggleOverlay() {
     let overlayRef = document.getElementById('overlay');
     overlayRef.classList.toggle('d_none');
     document.getElementById('close').classList.toggle('d_none');
+    document.getElementById('popupFoto').classList.toggle('bilder-gross');
    
 }
 
