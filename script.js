@@ -14,35 +14,30 @@ let album = [
     "img/img12.jpg"
 ];
 
-let currendIndex = 0;
-
-
-const bilder = document.getElementById('fotosContainer');
-const overlay = document.getElementById('overlay');
-let imagesHTML = "";
+let currentIndex = 0;
 
 function init() {
-// Die Bilder vom album in HTML Container einblenden
-for (let i=0; i<album.length; i++) {
-    imagesHTML+= `<img src="${album[i]}">`
-  
+    let fotosRef = document.getElementById('overlay');
+for (let index =0; index <album.length; index++) {
+    fotosRef.innerHTML += `
+      <div id="cardview">
+                <div id="fotos">
+                
+                <img  id="bilder" class="bilder-gross" src="${album[index]}" alt="">
+            </div>
+                
+                <button>Schließen</button>
+            </div>
+    
+    
+    `
 }
 
-bilder.innerHTML = imagesHTML;
-bilder.classList.add('bilder')
-
 }
 
 
-function toggleOverlay() {
+function toggleOverlay(index) {
     let overlayRef = document.getElementById('overlay');
-    overlayRef.classList.toggle('d_none');
-    document.getElementById('close').classList.toggle('d_none');
-    document.getElementById('popupFoto').classList.toggle('bilder-gross');
-   
-}
-
-function close() {
-   const closeRef = document.getElementById('popupFoto');
- closeRef.classList.remove('bilder-gross')  
+    overlayRef.classList.toggle('overlay');
+    
 }

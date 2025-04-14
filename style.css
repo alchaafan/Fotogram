@@ -1,8 +1,9 @@
 * {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -21,6 +22,7 @@ header {
 
 body {
     background-color: rgb(7, 24, 32);
+    height: 100dvh;
 
 }
 
@@ -44,40 +46,25 @@ h2 {
 .overlay {
     background-color: rgba(3, 3, 3, 0.76);
     position:absolute;
-    z-index: 10;
     width: 100%;
     height: 100vh;
-
+    top: 0;
+    left: 0;
 }
-
-
-#fotosContainer {
+#fotos {
     display: flex;
-   
+    flex-direction: row;
 }
 
 
-.bilder {
-    width: 100px;
-    height: 100px;
-    gap: 5px;
-    
+#bilder{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
 }
-
-#close {
-    bottom: 100px;
-   left: 1050px;
-   z-index: 12;
-}
-
 .bilder-gross {
-    z-index:11 ;
-    width: 600px;
-    height: 500px;
-    position: absolute;
-    left: 500px;
-   
-   
+    width: 400px;
+    height: 400px;
 }
 
 footer {
