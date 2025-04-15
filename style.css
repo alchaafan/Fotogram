@@ -22,7 +22,7 @@ header {
 
 body {
     background-color: rgb(7, 24, 32);
-    height: 100dvh;
+    
 
 }
 
@@ -53,7 +53,7 @@ h2 {
 }
 #fotos {
     display: flex;
-    flex-direction: row;
+  flex-direction: row;
 }
 
 
@@ -65,6 +65,10 @@ h2 {
 .bilder-gross {
     width: 400px;
     height: 400px;
+}
+
+#closeBtn {
+    background-color: red;
 }
 
 footer {

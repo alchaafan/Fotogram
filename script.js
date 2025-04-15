@@ -26,7 +26,7 @@ for (let index =0; index <album.length; index++) {
                 <img  id="bilder" src="${album[index]}"  onclick="toggleOverlay(${index})" class="bilder-gross">
             </div>
                 
-                <button>Schließen</button>
+                <button  onclick="close()"  id="closeBtn">Schließen</button>
             </div>
     
     
@@ -37,8 +37,12 @@ for (let index =0; index <album.length; index++) {
 
 
 function toggleOverlay(index) {
-    currentIndex = index;
     let overlayRef = document.getElementById('fotosContainer');
     overlayRef.classList.toggle('overlay');
     
+}
+
+function close() {
+    let closeRef = document.getElementById(' id="closeBtn"');
+    closeRef.innerHTML.classList.toggle('d_none');
 }
