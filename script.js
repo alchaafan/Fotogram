@@ -12,6 +12,7 @@ let album = [
     "img/img11.jpg",
     "img/img12.jpg"
 ];
+let i = 0;
 
 function init() {
     contentRef = document.getElementById('fotosContainer');
@@ -29,6 +30,13 @@ function init() {
 
 function toggleOverlay() {
     let overlayRef = document.getElementById('overlay');
+    overlayRef.innerHTML = `
+     <div id="cardview" class="bilder-gross">
+            <img src="${album[i]}" alt="">
+            <button id="close">schließen</button>
+        </div>
+
+    `
     overlayRef.classList.toggle('d_none');
     
     
