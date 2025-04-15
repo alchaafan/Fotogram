@@ -20,7 +20,7 @@ function init() {
         contentRef.innerHTML +=
         `
         <div id="overview">
-                <img class="bilder" src="${album[i]}" alt="">
+                <img  onclick="toggleOverlay()" class="bilder" src="${album[i]}" alt="">
             </div>
         `
         

@@ -14,7 +14,7 @@ body {
 
 }
 header {
-    background-color: rgb(10, 34, 44);
+    background-color: rgb(75, 130, 153);
     height: 90px;
     display: flex;
 }
@@ -45,7 +45,6 @@ main {
     width: 100px;
     height: 100px;
     cursor: pointer;
-    object-fit: cover;
     top: 300px;
 }
 
@@ -84,7 +83,6 @@ footer {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    bottom: 0;
     font-size: 10px;
 }
 
