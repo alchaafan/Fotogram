@@ -20,8 +20,8 @@ function init() {
 
         contentRef.innerHTML +=
         `
-        <div id="overview">
-                <img  onclick="toggleOverlay()" class="bilder" src="${album[i]}" alt="">
+        <div id="fotosContainer">
+                <img onclick="toggleOverlay()" class="bilder" src="${album[i]}" alt="">
             </div>
         `
         
@@ -31,8 +31,8 @@ function init() {
 function toggleOverlay() {
     let overlayRef = document.getElementById('overlay');
     overlayRef.innerHTML = `
-     <div id="cardview" class="bilder-gross">
-            <img src="${album[i]}" alt="">
+     <div id="cardview">
+            <img src="${album[i]}" alt=""  class="bilder-gross">
             <button id="close">schließen</button>
         </div>
 

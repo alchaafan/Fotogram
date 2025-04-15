@@ -49,8 +49,10 @@ main {
 }
 
 .bilder-gross {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+  left: 700px;
+  top: 200px;
 }
 .overlay {
     position: fixed;
@@ -62,6 +64,8 @@ main {
 }
 #close{
     color: red;
+    left: 700px;
+    bottom: 190px;
 }
 
 h2 {
