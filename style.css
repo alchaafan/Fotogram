@@ -1,29 +1,61 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     position: relative;
     scroll-behavior: smooth;
-}
-
-h1 {
+    font-family: "Itim", sans-serif;
     color: white;
 }
+body {
+    width: 100%;
+    height: 90dvh;
+    background-color: rgb(25, 20, 44);   
 
+}
 header {
     background-color: rgb(10, 34, 44);
     height: 90px;
     display: flex;
 }
 
+h1 {
+    color: white;
+}
+
 #logo {
     width: 200px;
 }
 
-body {
-    background-color: rgb(7, 24, 32);
-    
+main {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(193, 200, 207, 0.377);
+}
 
+#fotosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bilder {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    object-fit: cover;
+    top: 300px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 h2 {
@@ -43,41 +75,24 @@ h2 {
     display: none;
 }
 
-.overlay {
-    background-color: rgba(3, 3, 3, 0.76);
-    position:absolute;
+
+footer {
+    height: 112px;
     width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-}
-#fotos {
+    background-color: rgb(10, 34, 44);
     display: flex;
-  flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    font-size: 10px;
 }
 
 
-#bilder{
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
-}
+
 .bilder-gross {
     width: 400px;
     height: 400px;
-}
-
-#closeBtn {
-    background-color: red;
-}
-
-footer {
-    background-color: rgb(10, 34, 44);
-    margin-top: 28.8%;
-    display: flex;
-    padding: 1%;
-    flex-direction: column;
-    align-items: center;
 }
 
 #da-logo {

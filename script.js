@@ -1,4 +1,3 @@
-
 let album = [
     "img/img1.jpg",
     "img/img2.jpg",
@@ -14,35 +13,24 @@ let album = [
     "img/img12.jpg"
 ];
 
-let currentIndex = 0;
-
 function init() {
-    let fotosRef = document.getElementById('fotosContainer');
-for (let index =0; index <album.length; index++) {
-    fotosRef.innerHTML += `
-      <div id="cardview">
-                <div id="fotos">
-                
-                <img  id="bilder" src="${album[index]}"  onclick="toggleOverlay(${index})" class="bilder-gross">
+    contentRef = document.getElementById('fotosContainer');
+    for(let i =0; i<album.length; i++) {
+
+        contentRef.innerHTML +=
+        `
+        <div id="overview">
+                <img class="bilder" src="${album[i]}" alt="">
             </div>
-                
-                <button  onclick="close()"  id="closeBtn">Schließen</button>
-            </div>
+        `
+        
+    }
+}
+
+function toggleOverlay() {
+    let overlayRef = document.getElementById('overlay');
+    overlayRef.classList.toggle('d_none');
     
     
-    `
 }
-
-}
-
-
-function toggleOverlay(index) {
-    let overlayRef = document.getElementById('fotosContainer');
-    overlayRef.classList.toggle('overlay');
-    
-}
-
-function close() {
-    let closeRef = document.getElementById(' id="closeBtn"');
-    closeRef.innerHTML.classList.toggle('d_none');
-}
+toggleOverlay()
