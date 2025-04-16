@@ -37,15 +37,18 @@ function toggleOverlay(i) {
     let overlayRef = document.getElementById('overlay');
     let imageName = album[currentIndex]
     overlayRef.innerHTML = `
-     <div id="cardview" onclick="event.stopPropagation()">
-            <img id="bigImage" src="${album[i]}" alt=""  class="bilder-gross">
-             <p class="bilder-gross" id="imageName">${imageName}</p>
-            <div id="closeBtn"><button onclick="closeBtn()" id="close">X</button></div>
-             <div id="naviBtns">
-        <button class="naviBtn" onclick="showPrev()">&#8592;</button>
-        <button class="naviBtn" onclick="showNext()">&#8594;</button>
-        </div>
-        </div>
+                 <div id="cardview" onclick="event.stopPropagation()">
+                 <div id="closeContainer"><button onclick="closeBtn()" id="close">X</button></div>
+                            <img id="bigImage" src="${album[i]}" alt=""  class="bilder-gross">
+                            <p class="bilder-gross" id="imageName">${imageName}</p>
+                            
+                            <div id="navContainer">
+                            
+                        <button class="naviBtn" onclick="showPrev()">&#8592;</button>
+                        <button class="naviBtn" onclick="showNext()">&#8594;</button>
+                        </div>
+        
+                 </div>
 
     `
     overlayRef.classList.toggle('d_none');
