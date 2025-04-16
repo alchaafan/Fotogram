@@ -123,6 +123,43 @@ footer {
     height: 400px;
 }
 
+@media (max-width: 1150px) {
+    .bilder-gross {
+      left: 50px;
+        width: 60%;
+        height: 40%;
+    }
+    #imageName {
+        left: 80px;
+        font-size: 30px;
+        top: 200px;
+        
+        
+    }
+
+    .naviBtn {
+        left: 85px;
+        top: 190px;
+        padding: 5px;
+        border-radius: 30px;
+        color: black;
+        cursor: pointer;
+        font-size: 26px;
+    }
+
+    #close{
+        padding: 10px;
+        border-radius: 30px;
+        color: black;
+        left: 70%;
+        bottom: 90%;
+        cursor: pointer;
+    }
+
+
+}
+
+
 #da-logo {
     width: 160px;
 }
