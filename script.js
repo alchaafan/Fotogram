@@ -12,7 +12,7 @@ let album = [
     "img/img11.jpg",
     "img/img12.jpg"
 ];
-let i = 0;
+
 
 function init() {
     contentRef = document.getElementById('fotosContainer');
@@ -20,15 +20,16 @@ function init() {
 
         contentRef.innerHTML +=
         `
-        <div id="fotosContainer">
-                <img onclick="toggleOverlay()" class="bilder" src="${album[i]}" alt="">
+        <div>
+                <img onclick="toggleOverlay(${i})" class="bilder" src="${album[i]}" alt="">
             </div>
-        `
+        `;
         
     }
 }
 
-function toggleOverlay() {
+function toggleOverlay(i) {
+    
     let overlayRef = document.getElementById('overlay');
     overlayRef.innerHTML = `
      <div id="cardview">
@@ -38,6 +39,7 @@ function toggleOverlay() {
 
     `
     overlayRef.classList.toggle('d_none');
+   
     
     
 }
