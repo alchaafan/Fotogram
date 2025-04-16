@@ -37,6 +37,10 @@ function toggleOverlay(i) {
      <div id="cardview">
             <img src="${album[i]}" alt=""  class="bilder-gross">
             <button id="close">X</button>
+             <div>
+        <button class="naviBtn">&#8592;</button>
+        <button class="naviBtn">&#8594;</button>
+        </div>
         </div>
 
     `

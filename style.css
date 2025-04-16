@@ -72,6 +72,16 @@ main {
     color: black;
     left: 700px;
     bottom: 190px;
+    cursor: pointer;
+}
+.naviBtn {
+    left: 850px;
+    top: 190px;
+    padding: 5px;
+    border-radius: 30px;
+    color: black;
+    cursor: pointer;
+    font-size: 26px;
 }
 
 h2 {
