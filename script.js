@@ -35,7 +35,7 @@ let currentIndex = 0;
 function toggleOverlay(i) {
     currentIndex = i;
     let overlayRef = document.getElementById('overlay');
-    let imageName = album[currentIndex].split('/').pop();
+    let imageName = album[currentIndex]
     overlayRef.innerHTML = `
      <div id="cardview" onclick="event.stopPropagation()">
             <img id="bigImage" src="${album[i]}" alt=""  class="bilder-gross">
@@ -58,11 +58,14 @@ function closeOverlay() {
     let overlayRef = document.getElementById('overlay');
     overlayRef.classList.add('d_none')
 }
+
+//Diese Funktion ist für den Schließbutton
 function closeBtn() {
     let closeRef = document.getElementById('overlay');
     closeRef.classList.add('d_none')
 }
 
+//Navigationsbutton nächstes Bild
 function showNext() {
     if (currentIndex <album.length -1) {
         currentIndex++;
@@ -73,6 +76,8 @@ function showNext() {
     document.getElementById('imageName').textContent = album[currentIndex]
 }
 
+
+// Navigationsbutton vorheriges Bild
 function showPrev() {
     if (currentIndex >0) {
         currentIndex--;
