@@ -13,6 +13,7 @@ let album = [
     "img/img12.jpg"
 ];
 
+
 // um die Bilder beim Laden anzublenden
 function init() {
     contentRef = document.getElementById('fotosContainer');
@@ -30,16 +31,18 @@ function init() {
     }
 }
 
+let currentIndex = 0;
+
 function toggleOverlay(i) {
-    
+    currentIndex = i;
     let overlayRef = document.getElementById('overlay');
     overlayRef.innerHTML = `
-     <div id="cardview">
-            <img src="${album[i]}" alt=""  class="bilder-gross">
+     <div id="cardview" onclick="event.stopPropagation()">
+            <img id="bigImage" src="${album[i]}" alt=""  class="bilder-gross">
             <button id="close">X</button>
              <div>
-        <button class="naviBtn">&#8592;</button>
-        <button class="naviBtn">&#8594;</button>
+        <button class="naviBtn" onclick="showPrev()">&#8592;</button>
+        <button class="naviBtn" onclick="showNext()">&#8594;</button>
         </div>
         </div>
 
@@ -49,4 +52,29 @@ function toggleOverlay(i) {
     
     
 }
-toggleOverlay(i)
+
+function closeOverlay() {
+    let overlayRef = document.getElementById('overlay');
+    overlayRef.classList.add('d_none')
+}
+
+function showNext() {
+    if (currentIndex <album.length -1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    document.getElementById('bigImage').src = album[currentIndex];
+}
+
+function showPrev() {
+    if (currentIndex >0) {
+        currentIndex--;
+    } else {
+        currentIndex.album.length -1;
+    }
+    document.getElementById('bigImage').src = album[currentIndex];
+}
+
+
+
