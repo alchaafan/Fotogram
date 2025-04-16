@@ -13,9 +13,10 @@ let album = [
     "img/img12.jpg"
 ];
 
-
+// um die Bilder beim Laden anzublenden
 function init() {
     contentRef = document.getElementById('fotosContainer');
+    // Die Bilder werden mithilfe von for Schleife itiriert(wiederholt)
     for(let i =0; i<album.length; i++) {
 
         contentRef.innerHTML +=
@@ -34,7 +35,7 @@ function toggleOverlay(i) {
     overlayRef.innerHTML = `
      <div id="cardview">
             <img src="${album[i]}" alt=""  class="bilder-gross">
-            <button id="close">schließen</button>
+            <button id="close">X</button>
         </div>
 
     `

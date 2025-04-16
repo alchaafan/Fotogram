@@ -50,7 +50,7 @@ main {
 
 .bilder-gross {
     width: 200px;
-    height: 200px;
+    height: auto;
   left: 700px;
   top: 200px;
 }
@@ -67,12 +67,15 @@ main {
 }
 
 #close{
-    color: red;
+    padding: 10px;
+    border-radius: 30px;
+    color: black;
     left: 700px;
     bottom: 190px;
 }
 
 h2 {
+    
     color: white;
     font-family: "Kanit", sans-serif;
     font-style: normal;
