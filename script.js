@@ -39,9 +39,9 @@ function toggleOverlay(i) {
     overlayRef.innerHTML = `
      <div id="cardview" onclick="event.stopPropagation()">
             <img id="bigImage" src="${album[i]}" alt=""  class="bilder-gross">
-             <p id="imageName">${imageName}</p>
-            <button onclick="closeBtn()" id="close">X</button>
-             <div>
+             <p class="bilder-gross" id="imageName">${imageName}</p>
+            <div id="closeBtn"><button onclick="closeBtn()" id="close">X</button></div>
+             <div id="naviBtns">
         <button class="naviBtn" onclick="showPrev()">&#8592;</button>
         <button class="naviBtn" onclick="showNext()">&#8594;</button>
         </div>
@@ -87,6 +87,3 @@ function showPrev() {
     document.getElementById('bigImage').src = album[currentIndex];
     document.getElementById('imageName').textContent = album[currentIndex]
 }
-
-
-

@@ -24,6 +24,11 @@ header {
 h1 {
     color: white;
 }
+@media(max-width:500px) {
+    h1 {
+        font-size: 20px;
+    }
+}
 
 #logo {
     width: 200px;
@@ -54,18 +59,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    
 }
-@media(max-width: 1500px) {
-    #overview {
-        display: flex;
-        justify-content: center;
-    }
-    .bilder-gross {
-        display: flex;
-        justify-content: center;
-        
-    }
+
+@media(max-width:1200px) {
+
 }
 
 .bilder:hover {
@@ -74,10 +72,22 @@ main {
 }
 
 .bilder-gross {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
     width: 400px;
-    height: 400px;
-    left: 700px;
+    height: 300px;
     top: 200px;
+}
+@media(max-width:1200px) {
+    .bilder-gross {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+    }
 }
 
 .overlay {
@@ -93,30 +103,58 @@ main {
     display: none;
 }
 
+#closeBtn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    
+}
+
 #close {
     padding: 10px;
     border-radius: 30px;
     color: black;
-    left: 540px;
-    bottom: 20px;
     cursor: pointer;
+    margin-left: 500px;
+    margin-bottom: 230px;
+}
+@media(max-width: 600px){
+#close {
+    margin-right:150px;
+    margin-top: 30px;
+}
+
+}
+
+
+#naviBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .naviBtn {
-    left: 250px;
-    top: 450px;
     padding: 5px;
     border-radius: 30px;
     color: black;
     cursor: pointer;
     font-size: 26px;
+    margin-top: 510px;
+    right: 250px;
 }
 
-#imageName {
-    font-size: 30px;
-    left: 400px;
-    bottom: 40px;
 
+
+#imageName {
+    top: 10px;
+    font-size: 30px;
+
+}
+@media(max-width: 500px){
+#imageName {
+    font-size: 20px;
+}
 }
 
 h2 {
