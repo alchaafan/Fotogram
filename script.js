@@ -18,8 +18,9 @@ function init() {
     contentRef = document.getElementById('fotosContainer');
     // Die Bilder werden mithilfe von for Schleife itiriert(wiederholt)
     for(let i =0; i<album.length; i++) {
-
+         
         contentRef.innerHTML +=
+        //Die Bilder werden in einem HTML Container gerendert und werden durch ${album[i]}" angezeigt
         `
         <div>
                 <img onclick="toggleOverlay(${i})" class="bilder" src="${album[i]}" alt="">
@@ -44,4 +45,4 @@ function toggleOverlay(i) {
     
     
 }
-toggleOverlay()
+toggleOverlay(i)
